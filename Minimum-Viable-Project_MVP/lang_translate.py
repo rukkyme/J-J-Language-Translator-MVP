@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk, messagebox
-from googletrans import LANGUAGES
+from googletrans import LANGUAGES, Translator
 from textblob import TextBlob
 
 
