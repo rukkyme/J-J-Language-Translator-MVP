@@ -1,8 +1,9 @@
+#!/usr/bin/python3
+
 from tkinter import *
 from tkinter import ttk, messagebox
 from googletrans import LANGUAGES, Translator
 from textblob import TextBlob
-
 
 window = Tk()
 window.title("J-J-Language Translator")
@@ -15,7 +16,7 @@ def translate():
         c1 = combo1.get()
         c2 = combo2.get()
         if txt:
-            translator = Translator(service_urls=['translate.google.com'], timeout=5, api_key='2054495c77mshb9caf1e825426dep146d9fjsne91745bbddc3')
+            translator = Translator(service_urls=['translate.google.com'])
             result = translator.translate(txt, src=c1, dest=c2)
             translated_text = result.text
             text2.delete(1.0, END)
@@ -26,7 +27,6 @@ def translate():
 language = LANGUAGES
 lang_value = list(language.values())
 lang1 = language.keys()
-
 combo1 = ttk.Combobox(window, values=lang_value, state='readonly')
 combo1.place(x=100, y=20)
 combo1.set("choose a language")
