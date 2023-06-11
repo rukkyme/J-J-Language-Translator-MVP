@@ -11,6 +11,8 @@ window = Tk()
 window.title("J-J-Language Translator")
 window.minsize(600, 500)
 window.maxsize(600, 500)
+window.configure(bg="#008080")  # Set background color
+
 
 # Translation function
 def translate():
