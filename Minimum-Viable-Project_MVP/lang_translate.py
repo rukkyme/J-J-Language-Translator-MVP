@@ -23,14 +23,13 @@ def translate():
         c2 = combo2.get()
 
         if txt:
-<<<<<<< HEAD
-            translator = Translator(service_urls=['translate.google.com'], timeout=5, api_key='2054495c77mshb9caf1e825426dep146d9fjsne91745bbddc3')
-=======
+
+            translator = Translator(service_urls=['translate.google.com'])
+
             # Create a translator instance
             translator = Translator(service_urls=['translate.google.com'])
 
             # Translate the text
->>>>>>> fb4506a17db55e15144dc17c3308a0a3fca4e5ac
             result = translator.translate(txt, src=c1, dest=c2)
             translated_text = result.text
 
